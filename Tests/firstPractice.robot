@@ -40,5 +40,4 @@ Add new customer
     Sleep                           2s            
     Close Browser
 
-
 *** Keywords ***
