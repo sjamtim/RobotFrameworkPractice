@@ -5,7 +5,7 @@ Library                          SeleniumLibrary
 #Run the script: robot -d results Tests/firstScript.robot
 
 *** Variables ***
-#Här ska jag lägga till variabler för att göra skriptet mer körbart
+#Här ska jag lägga till variabler för att göra skriptet mer läsbart. 
 
 *** Test Cases ***
 Add new customer
