@@ -19,7 +19,6 @@ Add new customer
     Click Link                      id=SignIn
     Wait Until Page Contains        Login
 
-
     Input Text                      id=email-id                                              admin@automationplayground.com
     Input Text                      id=password                                              qwe
     Click Button                    id=submit-id
