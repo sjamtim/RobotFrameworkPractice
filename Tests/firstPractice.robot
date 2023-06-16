@@ -5,8 +5,7 @@ Library                          SeleniumLibrary
 #Run the script: robot -d results Tests/firstScript.robot
 
 *** Variables ***
-#Här ska jag lägga till variabler för att göra skriptet mer läsbart. 
-
+#Här ska jag lägga till variabler för att göra skriptet mer läsbart!!! 
 *** Test Cases ***
 Add new customer
     [Tags]                          AddNewCustomer
@@ -19,6 +18,7 @@ Add new customer
 
     Click Link                      id=SignIn
     Wait Until Page Contains        Login
+
 
     Input Text                      id=email-id                                              admin@automationplayground.com
     Input Text                      id=password                                              qwe
