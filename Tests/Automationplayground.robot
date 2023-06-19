@@ -2,6 +2,9 @@
 Documentation                    Detta är information om hela test-suiten
 Resource                         ../Resources/Automationplayground.robot
 Resource                         ../Resources/Common.robot
+
+Test Setup                        Påbörjar testfallet
+Test Teardown                     Avslutar testfallet
 #Run the script: robot -d results Tests/firstScript.robot
 
 *** Variables ***
@@ -9,8 +12,6 @@ Resource                         ../Resources/Common.robot
 
 *** Test Cases ***
 Lägg till ny kund
-    Påbörjar testfallet
     Öppnar webbsidan
     Loggar in
     Lägger till ny kund
-    Avslutar testfallet
