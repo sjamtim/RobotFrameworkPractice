@@ -7,26 +7,29 @@ Library                          SeleniumLibrary
 *** Variables ***
 #Här ska jag lägga till variabler för att göra skriptet mer läsbart!!! 
 *** Test Cases ***
-Add new customer
-    [Tags]                          AddNewCustomer
-
+Lägg till ny kund
+    Påbörjar testfallet
+    Loggar in
+    Lägger till ny kund
+    Avslutar testfallet
+    
+*** Keywords ***
+Påbörjar testfallet
     Log to console                  Påbörjar testfallet.. 
     Open Browser                    https://automationplayground.com/crm/                    chrome
     Maximize Browser Window
     Wait Until Page Contains        Customers Are Priority One!
     Log To Console                  Öppnade hemsidan
-
+Loggar in
     Click Link                      id=SignIn
     Wait Until Page Contains        Login
-
     Input Text                      id=email-id                                              admin@automationplayground.com
     Input Text                      id=password                                              qwe
     Click Button                    id=submit-id
     Wait Until Page Contains        Our Happy Customers
-
     Click link                      id=new-customer        
     Wait Until Page Contains        Add Customer
-
+Lägger till ny kund
     Input Text                      id=EmailAddress                                          janedoi@gmail.com
     Input Text                      id=FirstName                                             Jan
     Input Text                      id=LastName                                              Felofsson
@@ -35,9 +38,7 @@ Add new customer
     Select Radio Button             gender                                                   male
     Select Checkbox                 name=promos-name                         
     Click Button                    xpath=//*[@id="loginform"]/div/div/div/div/form/button    
-    Wait Until Page Contains        Success! New customer added.            
-    
+    Wait Until Page Contains        Success! New customer added.
+Avslutar testfallet
     Sleep                           2s            
     Close Browser
-
-*** Keywords ***
