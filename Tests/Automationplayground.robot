@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation                    Detta är information om hela test-suiten
-Resource                         ../Resources/Automationplayground.robot
+Resource                         ../Resources/AutomationplaygroundApp.robot
 Resource                         ../Resources/Common.robot
 
-Test Setup                        Påbörjar testfallet
-Test Teardown                     Avslutar testfallet
+Test Setup                        Common.Påbörjar testfallet
+Test Teardown                     Common.Avslutar testfallet
 #Run the script: robot -d results Tests/firstScript.robot
 
 *** Variables ***
@@ -12,6 +12,6 @@ Test Teardown                     Avslutar testfallet
 
 *** Test Cases ***
 Lägg till ny kund
-    Öppnar webbsidan
-    Loggar in
-    Lägger till ny kund
+    AutomationplaygroundApp.Öppnar webbsidan
+    AutomationplaygroundApp.Loggar in
+    AutomationplaygroundApp.Lägger till ny kund
