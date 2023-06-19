@@ -5,18 +5,21 @@ Library                          SeleniumLibrary
 #Run the script: robot -d results Tests/firstScript.robot
 
 *** Variables ***
-#Här ska jag lägga till variabler för att göra skriptet mer läsbart!!! 
+#Här ska jag lägga till variabler för att göra skriptet mer användbart 
 *** Test Cases ***
 Lägg till ny kund
     Påbörjar testfallet
+    Öppnar webbsidan
     Loggar in
     Lägger till ny kund
     Avslutar testfallet
     
 *** Keywords ***
 Påbörjar testfallet
+    Open Browser                    about:blank        chrome
+Öppnar webbsidan
     Log to console                  Påbörjar testfallet.. 
-    Open Browser                    https://automationplayground.com/crm/                    chrome
+    Go To                           https://automationplayground.com/crm/
     Maximize Browser Window
     Wait Until Page Contains        Customers Are Priority One!
     Log To Console                  Öppnade hemsidan
