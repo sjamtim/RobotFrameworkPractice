@@ -15,4 +15,3 @@ Lägg till ny kund
     Öppnar webbsidan
     Loggar in
     Lägger till ny kund
-    sdfdsfdsfdsfdsfsdf
